@@ -1,0 +1,119 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\inetpub\\wwwroot\\InventoryManagementAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DB3F0615-3AE8-4644-BCB3-0DFD159FFA57}|InventoryManagementAPI\\InventoryManagementAPI.csproj|c:\\inetpub\\wwwroot\\inventorymanagementapi\\inventorymanagementapi\\service\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB3F0615-3AE8-4644-BCB3-0DFD159FFA57}|InventoryManagementAPI\\InventoryManagementAPI.csproj|solutionrelative:inventorymanagementapi\\service\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB3F0615-3AE8-4644-BCB3-0DFD159FFA57}|InventoryManagementAPI\\InventoryManagementAPI.csproj|c:\\inetpub\\wwwroot\\inventorymanagementapi\\inventorymanagementapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB3F0615-3AE8-4644-BCB3-0DFD159FFA57}|InventoryManagementAPI\\InventoryManagementAPI.csproj|solutionrelative:inventorymanagementapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB3F0615-3AE8-4644-BCB3-0DFD159FFA57}|InventoryManagementAPI\\InventoryManagementAPI.csproj|c:\\inetpub\\wwwroot\\inventorymanagementapi\\inventorymanagementapi\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB3F0615-3AE8-4644-BCB3-0DFD159FFA57}|InventoryManagementAPI\\InventoryManagementAPI.csproj|solutionrelative:inventorymanagementapi\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB3F0615-3AE8-4644-BCB3-0DFD159FFA57}|InventoryManagementAPI\\InventoryManagementAPI.csproj|c:\\inetpub\\wwwroot\\inventorymanagementapi\\inventorymanagementapi\\service\\iaccountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB3F0615-3AE8-4644-BCB3-0DFD159FFA57}|InventoryManagementAPI\\InventoryManagementAPI.csproj|solutionrelative:inventorymanagementapi\\service\\iaccountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB3F0615-3AE8-4644-BCB3-0DFD159FFA57}|InventoryManagementAPI\\InventoryManagementAPI.csproj|c:\\inetpub\\wwwroot\\inventorymanagementapi\\inventorymanagementapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DB3F0615-3AE8-4644-BCB3-0DFD159FFA57}|InventoryManagementAPI\\InventoryManagementAPI.csproj|solutionrelative:inventorymanagementapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB3F0615-3AE8-4644-BCB3-0DFD159FFA57}|InventoryManagementAPI\\InventoryManagementAPI.csproj|c:\\inetpub\\wwwroot\\inventorymanagementapi\\inventorymanagementapi\\model\\signinmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB3F0615-3AE8-4644-BCB3-0DFD159FFA57}|InventoryManagementAPI\\InventoryManagementAPI.csproj|solutionrelative:inventorymanagementapi\\model\\signinmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\inetpub\\wwwroot\\InventoryManagementAPI\\InventoryManagementAPI\\Program.cs",
+              "RelativeDocumentMoniker": "InventoryManagementAPI\\Program.cs",
+              "ToolTip": "C:\\inetpub\\wwwroot\\InventoryManagementAPI\\InventoryManagementAPI\\Program.cs",
+              "RelativeToolTip": "InventoryManagementAPI\\Program.cs",
+              "ViewState": "AgIAAA4AAADAzMzMzMwnwA8AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-23T15:30:39.109Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\inetpub\\wwwroot\\InventoryManagementAPI\\InventoryManagementAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "InventoryManagementAPI\\appsettings.json",
+              "ToolTip": "C:\\inetpub\\wwwroot\\InventoryManagementAPI\\InventoryManagementAPI\\appsettings.json",
+              "RelativeToolTip": "InventoryManagementAPI\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-17T02:40:21.145Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IAccountService.cs",
+              "DocumentMoniker": "C:\\inetpub\\wwwroot\\InventoryManagementAPI\\InventoryManagementAPI\\Service\\IAccountService.cs",
+              "RelativeDocumentMoniker": "InventoryManagementAPI\\Service\\IAccountService.cs",
+              "ToolTip": "C:\\inetpub\\wwwroot\\InventoryManagementAPI\\InventoryManagementAPI\\Service\\IAccountService.cs",
+              "RelativeToolTip": "InventoryManagementAPI\\Service\\IAccountService.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAxwBAAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-14T05:39:52.873Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccountService.cs",
+              "DocumentMoniker": "C:\\inetpub\\wwwroot\\InventoryManagementAPI\\InventoryManagementAPI\\Service\\AccountService.cs",
+              "RelativeDocumentMoniker": "InventoryManagementAPI\\Service\\AccountService.cs",
+              "ToolTip": "C:\\inetpub\\wwwroot\\InventoryManagementAPI\\InventoryManagementAPI\\Service\\AccountService.cs",
+              "RelativeToolTip": "InventoryManagementAPI\\Service\\AccountService.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAEwBYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-14T04:46:29.814Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\inetpub\\wwwroot\\InventoryManagementAPI\\InventoryManagementAPI\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "InventoryManagementAPI\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\inetpub\\wwwroot\\InventoryManagementAPI\\InventoryManagementAPI\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "InventoryManagementAPI\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAEwCYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-14T04:28:18.117Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SignInModel.cs",
+              "DocumentMoniker": "C:\\inetpub\\wwwroot\\InventoryManagementAPI\\InventoryManagementAPI\\Model\\SignInModel.cs",
+              "RelativeDocumentMoniker": "InventoryManagementAPI\\Model\\SignInModel.cs",
+              "ToolTip": "C:\\inetpub\\wwwroot\\InventoryManagementAPI\\InventoryManagementAPI\\Model\\SignInModel.cs",
+              "RelativeToolTip": "InventoryManagementAPI\\Model\\SignInModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-14T03:36:25.715Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
