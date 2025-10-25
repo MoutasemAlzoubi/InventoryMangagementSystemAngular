@@ -1,0 +1,3 @@
+[submodule "InventoryManagementAngular"]
+	path = InventoryManagementAngular
+	url = https://github.com/YourAngularRepoURL.git
