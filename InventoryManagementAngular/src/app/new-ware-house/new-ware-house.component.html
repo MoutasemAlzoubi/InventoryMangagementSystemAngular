@@ -1,0 +1,68 @@
+<div class="card">
+	<div class="card-body">
+			<div class="card-body">
+				<form [formGroup]="WareForm">
+					<div class="row">
+						<div class="col-12">
+							<h5 class="form-title"><span>Add Warehouse</span></h5>
+						</div>
+						<div class="col-12 col-sm-3">
+							<div class="form-group local-forms" >
+								<label>Warehouse Name<span class="login-danger">*</span></label>
+								<input type="text" class="form-control" formControlName="txtName">
+								<span class="validators" *ngIf="WareForm.controls['txtName'].touched &&
+                                                                WareForm.hasError('required','txtName')">Please enter the Warehouse Name</span>
+
+							</div>
+						</div>
+						<div class="col-12 col-sm-3">
+							<div class="form-group local-forms">
+								<label>Description<span class="login-danger">*</span></label>
+								<input type="text" class="form-control" formControlName="txtDesc" >
+								<span class="validators" *ngIf="WareForm.controls['txtDesc'].touched &&
+                                                                WareForm.hasError('required','txtDesc')">Please enter the Description</span>
+							</div>
+						</div>
+                        <div class="col-12 col-sm-3 form-group local-forms">
+                            <label>Country<span class="login-danger">*</span></label>
+                        <select class="form-select" aria-label="Default select example" style="height: 45px;" formControlName="txtCountry">
+                            <option selected>Select the Country</option>
+                            <option *ngFor="let Item of countryList" [value]="Item.id">{{Item.name}}</option>
+                            </select>
+                            <span class="validators" *ngIf="WareForm.controls['txtCountry'].touched &&
+                                                                WareForm.hasError('required','txtCountry')">Please enter the Country</span>
+                        </div>
+                        <div class="col-12 col-sm-3 form-group local-forms">
+                            <label>City<span class="login-danger">*</span></label>
+                        <select class="form-select" aria-label="Default select example" style="height: 45px;" formControlName="txtCity">
+                            <option selected>Select the City</option>
+                            <option *ngFor="let item of cityList" [value]="item.id">{{item.name}}</option>
+                            </select>
+                            <span class="validators" *ngIf="WareForm.controls['txtCity'].touched &&
+                                                                WareForm.hasError('required','txtCity')">Please enter the City</span>
+                        </div>
+						<div class="col-12 col-sm-4">
+							<div class="form-group local-forms">
+								<label hidden>Warehouse ID <span class="login-danger">*</span></label>
+								<input type="hidden" class="form-control" formControlName="txtId">
+
+							</div>
+						</div>
+						
+						<div class="col-12">
+							<div class="student-submit">
+
+								
+									<input type="button"  value="Update" class="btn btn-primary" *ngIf="isEdit == true" (click)="Update()"/>
+								
+								
+								
+									<input type="button" value="Save" class="btn btn-primary" *ngIf="isEdit == false" (click)="save()"/>
+								
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+	</div>
+</div>

@@ -1,0 +1,61 @@
+/* الحاوية لكل input */
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+  min-height: 56px;
+  display: flex;
+  align-items: center; /* يجعل كل شيء عموديًا بالمنتصف */
+}
+
+/* input كلمة المرور واسم المستخدم */
+.pass-input, .form-control {
+  width: 100%;
+  padding-right: 40px; /* مسافة للأيقونة */
+  height: 42px;        /* ارتفاع مناسب */
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* أيقونة العين */
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  font-size: 16px;
+  color: #555;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%); /* بالضبط في منتصف الحقل */
+}
+
+/* عند المرور على الأيقونة */
+.toggle-password:hover {
+  color: #000;
+}
+
+/* أيقونة المستخدم */
+.profile-views {
+  position: absolute;
+  right: 10px;
+  font-size: 16px;
+  color: #555;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* الرسائل الخاصة بالـ validation */
+.validators {
+  position: absolute;
+  bottom: -18px;
+  left: 0;
+  font-size: 12px;
+  color: red;
+  height: 18px;
+}
+
+/* زر تسجيل الدخول */
+.btn-primary {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}

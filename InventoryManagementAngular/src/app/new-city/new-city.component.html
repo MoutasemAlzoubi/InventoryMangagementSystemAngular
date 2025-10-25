@@ -1,0 +1,62 @@
+<div class="card">
+	<div class="card-body">
+			<div class="card-body">
+				<form [formGroup]="CityForm">
+				<div class="row">
+					<div class="col-12">
+						<h5 class="form-title"><span>Add City</span></h5>
+					</div>
+					<div class="col-12 col-sm-4">
+						<div class="form-group local-forms">
+							<label>City Name <span class="login-danger">*</span></label>
+							<input type="text" class="form-control" formControlName="txtName" >
+							<span class="validators" *ngIf="CityForm.controls['txtName'].touched &&
+                                                            CityForm.hasError('required','txtName')">Please fillout the Name</span>
+						</div>
+					</div>
+						<div class="col-12 col-sm-4">
+							<div class="form-group local-forms">
+								<label>Country<span class="login-danger">*</span></label>
+								<select class="form-control select data-select2-id" formControlName="txtCountryList">
+									<option data-select2-id="3">Select Country</option>
+                                    <option *ngFor="let Item of listCountry" [value]="Item.id">{{Item.name}}</option>
+									
+
+
+									
+								</select>
+								<span class="validators" *ngIf="CityForm.controls['txtCountryList'].touched &&
+                                                                CityForm.hasError('required','txtCountryList')">Please fillout the Country</span>
+							</div>
+						</div>
+					<div class="col-12 col-sm-4">
+						<div class="form-group local-forms">
+							<label hidden>City ID <span class="login-danger">*</span></label>
+							<input type="hidden" class="form-control">
+
+						</div>
+					</div>
+					
+
+
+
+						<div class="col-12">
+							<div class="student-submit">
+								<input type="button" value="Update" class="btn btn-primary" *ngIf="isEdit == true" (click)="Update()" />
+							</div>
+						</div>
+					
+					
+
+						<div class="col-12">
+							<div class="student-submit">
+								<input type="button" value="Save" class="btn btn-primary" *ngIf="isEdit == false" (click)="Save()"/>
+							</div>
+						</div>
+					
+
+				</div>
+				</form>
+		    </div>
+	</div>
+</div>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+	<title>StockPro - Login</title>
+</head>
+<body>
+	<!-- Main Wrapper -->
+	<div class="main-wrapper login-body">
+		<div class="login-wrapper">
+			<div class="container">
+				<div class="loginbox">
+					
+					<!-- Left side -->
+					<div class="login-left">
+						<img class="img-fluid" src="assets/img/myimg.png" alt="Logo">
+					</div>
+
+					<!-- Right side -->
+					<div class="login-right">
+						<div class="login-right-wrap" style="    height: 90%;">
+							<h1>Welcome to StockPro</h1>
+							<div *ngIf="invalidPass" class="alert alert-danger" role="alert" >
+								Invalid Username or Password
+								</div>
+
+							<!-- Login Form -->
+							<form [formGroup]="loginForm" (ngSubmit)="LogIn()" style="margin-top: 100px;">
+								
+								
+								
+								<!-- Username -->
+								<div class="form-group" >
+									<label>Username <span class="login-danger">*</span></label>
+									<input class="form-control" type="text" formControlName="txtUserName">
+									<span class="profile-views">
+										<i class="fas fa-user-circle"></i>
+									</span>
+									<span class="validators" *ngIf="
+										loginForm.get('txtUserName')?.touched &&
+										loginForm.get('txtUserName')?.hasError('required')
+									">
+										Please enter your username
+									</span>
+								</div>
+
+								<!-- Password -->
+								<div class="form-group position-relative" style="margin-top: 30px;">
+									<label>Password <span class="login-danger">*</span></label>
+									<input 
+										[type]="showPassword ? 'text' : 'password'" 
+										class="form-control" 
+										formControlName="txtPassword">
+
+									<!-- 👁 Toggle Icon -->
+									<i 
+										class="fas"
+										[ngClass]="showPassword ? 'fa-eye-slash' : 'fa-eye'"
+										(click)="togglePassword()"
+										style="
+											position: absolute;
+											right: 15px;
+											top: 50%;
+											transform: translateY(-50%);
+											cursor: pointer;
+											color: #777;
+										">
+									</i>
+
+									<span class="validators" *ngIf="
+										loginForm.get('txtPassword')?.touched &&
+										loginForm.get('txtPassword')?.hasError('required')
+									">
+										Please enter your password
+									</span>
+								</div>
+
+								<!-- Submit -->
+								<div class="form-group">
+									<button type="button" class="btn btn-primary btn-block" (click)="LogIn()">
+										Login
+									</button>
+								</div>
+							</form>
+							<!-- /Login Form -->
+
+						</div>
+					</div>
+					<!-- /Right side -->
+
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

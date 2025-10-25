@@ -1,0 +1,48 @@
+<div class="card">
+	<div class="card-body">
+			<div class="card-body">
+				<form [formGroup]="CountryForm">
+					<div class="row">
+						<div class="col-12">
+							<h5 class="form-title"><span>Add Country</span></h5>
+						</div>
+						<div class="col-12 col-sm-4">
+							<div class="form-group local-forms" >
+								<label>Country Code <span class="login-danger">*</span></label>
+								<input type="text" class="form-control" formControlName="txtCode">
+								<span class="validators" *ngIf="CountryForm.controls['txtCode'].touched && CountryForm.hasError('required','txtCode')">Please fillout the Country Code</span>
+
+							</div>
+						</div>
+						<div class="col-12 col-sm-4">
+							<div class="form-group local-forms">
+								<label>Country Name <span class="login-danger">*</span></label>
+								<input type="text" class="form-control" formControlName="txtName" >
+								<span class="validators" *ngIf="CountryForm.controls['txtName'].touched && CountryForm.hasError('required','txtName')">Please fillout the Country Name</span>
+							</div>
+						</div>
+						<div class="col-12 col-sm-4">
+							<div class="form-group local-forms">
+								<label hidden>Country ID <span class="login-danger">*</span></label>
+								<input type="hidden" class="form-control">
+
+							</div>
+						</div>
+						
+						<div class="col-12">
+							<div class="student-submit">
+
+								
+									<input type="button"  value="Update" class="btn btn-primary" *ngIf="IsEdit == true" (click)="Update()" />
+								
+								
+								
+									<input type="button" value="Save" class="btn btn-primary" *ngIf="IsEdit == false" (click)="Save()"/>
+								
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+	</div>
+</div>

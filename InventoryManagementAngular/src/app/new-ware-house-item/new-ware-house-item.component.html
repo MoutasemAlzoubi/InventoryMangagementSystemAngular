@@ -1,0 +1,82 @@
+<div class="card">
+	<div class="card-body">
+			<div class="card-body">
+				<form [formGroup]="itemForm">
+					<div class="row">
+						<div class="col-12">
+							<h5 class="form-title"><span>Add Item</span></h5>
+						</div>
+						<div class="col-12 col-sm-3">
+							<div class="form-group local-forms" >
+								<label>Item Name<span class="login-danger">*</span></label>
+								<input type="text" class="form-control" formControlName="txtName">
+								<span class="validators" *ngIf="itemForm.hasError('required','txtName') &&
+																itemForm.controls['txtName'].touched">Please enter the Item Name</span>
+
+							</div>
+						</div>
+                        <div class="col-12 col-sm-3">
+							<div class="form-group local-forms" >
+								<label>Item Code<span class="login-danger">*</span></label>
+								<input type="text" class="form-control" formControlName="txtCode">
+								<span class="validators" *ngIf="itemForm.controls['txtCode'].touched &&
+																itemForm.hasError('required','txtCode')">Please enter the item Code</span>
+
+							</div>
+						</div>
+                        <div class="col-12 col-sm-3">
+							<div class="form-group local-forms" >
+								<label>Quantity<span class="login-danger">*</span></label>
+								<input type="text" class="form-control" formControlName="txtQty">
+								<span class="validators" *ngIf="itemForm.controls['txtQty'].touched &&
+																itemForm.hasError('required','txtQty')">Please enter the Quntity</span>
+
+							</div>
+						</div>
+                        <div class="col-12 col-sm-3">
+							<div class="form-group local-forms" >
+								<label>Cost Price<span class="login-danger">*</span></label>
+								<input type="text" class="form-control" formControlName="txtPrice">
+								<span class="validators" *ngIf="itemForm.controls['txtPrice'].touched &&
+																itemForm.hasError('required','txtPrice')">Please enter the CostPrice</span>
+
+							</div>
+						</div>
+                        <div class="col-12 col-sm-4">
+							<div class="form-group local-forms">
+								<label>Warehouse<span class="login-danger">*</span></label>
+								<select class="form-control select data-select2-id" formControlName="txtHouse">
+									<option data-select2-id="3">Select the Warehouse</option>
+                                    <option *ngFor="let Item of ddlWareHouse" [value]="Item.id">{{Item.name}}</option>
+									
+								</select>
+								<span class="validators" *ngIf="itemForm.controls['txtHouse'].touched &&
+																itemForm.hasError('required','txtHouse')">Please fillout the Warehouse</span>
+							</div>
+						</div>
+						
+						<div class="col-12 col-sm-4">
+							<div class="form-group local-forms">
+								<label hidden>WarehouseItem ID <span class="login-danger">*</span></label>
+								<input type="hidden" class="form-control">
+
+							</div>
+						</div>
+						
+						<div class="col-12">
+							<div class="student-submit">
+
+								
+									<input type="button"  value="Update" class="btn btn-primary" *ngIf="isEdit == true"  (click)="Update()"/>
+								
+								
+								
+									<input type="button" value="Save" class="btn btn-primary" *ngIf="isEdit == false"   (click)="save()" />
+								
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+	</div>
+</div>

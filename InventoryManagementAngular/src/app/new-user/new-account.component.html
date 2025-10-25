@@ -1,0 +1,79 @@
+<div class="main-wrapper login-body">
+    <div class="login-wrapper">
+        <div class="container">
+            <div class="loginbox" style="display:flex; justify-content:center">
+                <div class="login-right" style="width:450px">
+                    <div class="login-right-wrap">
+                        <h1>Sign Up</h1>
+                        <p class="account-subtitle">Enter details to create your account</p>
+
+                        <!-- Form -->
+                        <form [formGroup]="AccountForm">
+                            <input type="hidden">
+
+                            <div class="form-group">
+                                <label>Name <span class="login-danger">*</span></label>
+                                <input class="form-control" type="text" formControlName="txtName">
+                                <span class="validators" *ngIf="AccountForm.hasError('required','txtName') &&
+                                                                AccountForm.controls['txtName'].touched">Please fillout the Name</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label>User Name <span class="login-danger">*</span></label>
+                                <input class="form-control" type="text" formControlName="txtUserName">
+                                <span class="validators"  *ngIf="AccountForm.hasError('required','txtUserName') &&
+                                                                 AccountForm.controls['txtUserName'].touched">Please fillout the Username</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Password <span class="login-danger">*</span></label>
+                                <input class="form-control pass-input" type="text" formControlName="txtPassword">
+                                <span class="validators"  *ngIf="AccountForm.hasError('required','txtPassword') &&
+                                                                 AccountForm.controls['txtPassword'].touched">Please fillout the Password</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Confirm password <span class="login-danger">*</span></label>
+                                <input class="form-control pass-confirm" type="text" formControlName="txtConfPass">
+                                <span class="validators"  *ngIf="AccountForm.hasError('required','txtConfPass') &&
+                                                                 AccountForm.controls['txtConfPass'].touched">Please confirm your Password</span>
+                                <div *ngIf="AccountForm.get('txtConfPass')?.value && AccountForm.get('txtPassword')?.value !== AccountForm.get('txtConfPass')?.value">
+                                <small style="color:red">Password do not match</small>
+                                </div>
+                            <br>
+                            </div>
+                            <!-- <span *ngIf="AccountForm.get('txtConfPass')?.errors?.['mismatch']">
+                            <small style="color:red">Passwords do not match</small>
+                            </span>
+                            <br> -->
+
+                            <div class="form-group">
+                                <label>Role <span class="login-danger">*</span></label>
+                                <select class="form-control select2"  formControlName="txtRole">
+                                    <option>Select Role</option>
+                                        <option *ngFor="let item of roleList" [value]="item.name">{{item.name}}</option>
+                                </select>
+                                <span class="validators" *ngIf="AccountForm.hasError('required','txtRole') &&
+                                                                 AccountForm.controls['txtRole'].touched"></span>
+                            </div>
+
+                            <div class="form-group mb-0">
+                                
+                                    <button class="btn btn-primary btn-block" type="button"  [disabled]="AccountForm.invalid" *ngIf="isEdit == false"  (click)="Save()">Register</button>
+
+                                    <button class="btn btn-primary btn-block" type="button" *ngIf="isEdit == true"    (click)="Update()">Update</button>
+
+                                
+                                
+                                
+                                    <!-- <button class="btn btn-primary btn-block" type="button" >Update</button> -->
+                                
+                            </div>
+                        </form>
+                        <!-- /Form -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

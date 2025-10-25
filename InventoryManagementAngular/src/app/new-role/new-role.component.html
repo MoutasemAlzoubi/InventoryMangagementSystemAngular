@@ -1,0 +1,48 @@
+<div class="card">
+	<div class="card-body">
+			<div class="card-body">
+				<form [formGroup]="roleForm">
+				<div class="row">
+					<div class="col-12">
+						<h5 class="form-title"><span>Add Role</span></h5>
+					</div>
+					<div class="col-12 col-sm-4">
+						<div class="form-group local-forms">
+							<label>Role Name <span class="login-danger">*</span></label>
+							<input type="text" class="form-control" formControlName="txtRole" >
+							<span class="validators" *ngIf="roleForm.controls['txtRole'].touched &&
+                                                            roleForm.hasError('required','txtRole')" >Please fillout the Role Name</span>
+						</div>
+					</div>
+						
+					<div class="col-12 col-sm-4">
+						<div class="form-group local-forms">
+							<label hidden>City ID <span class="login-danger">*</span></label>
+							<input type="hidden" class="form-control">
+
+						</div>
+					</div>
+					
+
+
+
+						<div class="col-12">
+							<div class="student-submit">
+								<input type="button" value="Update" class="btn btn-primary" *ngIf="isEdit == true" (click)="Update()"  />
+							</div>
+						</div>
+					
+					
+
+						<div class="col-12">
+							<div class="student-submit">
+								<input type="button" value="Save" class="btn btn-primary" *ngIf="isEdit == false" (click)="save()"/>
+							</div>
+						</div>
+					
+
+				</div>
+				</form>
+		    </div>
+	</div>
+</div>
