@@ -155,67 +155,93 @@
 
 	<!-- Sidebar -->
 	<div class="sidebar" id="sidebar">
-		<div class="sidebar-inner slimscroll">
-			<div id="sidebar-menu" class="sidebar-menu">
-				<ul>
-					<li class="menu-title">
-						<span>Main Menu</span>
-					</li>
+    <div class="sidebar-inner slimscroll">
+        <div id="sidebar-menu" class="sidebar-menu">
+            <ul>
+                <li class="menu-title">
+                    <span>Main Menu</span>
+                </li>
 
-					<!-- User -->
-					<li class="submenu" *ngIf="role === 'Admin'">
-						<a routerLink="/app/NewAccount"><i class="fa-solid fa-user-plus"></i> <span>User add</span> <span class="menu-arrow"></span></a>
-					</li>
-					<li class="submenu" *ngIf="role === 'Admin'">
-						<a routerLink="/app/UserList"><i class="fa-solid fa-users"></i> <span>User List</span> <span class="menu-arrow"></span></a>
-					</li>
+                <!-- Dashboard -->
+                <li class="submenu">
+                    <a routerLink="/app/Dashboard"><i class="fa-solid fa-gauge"></i> <span>Dashboard</span></a>
+                </li>
 
-					<!-- Role -->
-					<li class="submenu"  *ngIf="role === 'Admin'">
-						<a routerLink="/app/NewRole"><i class="fa-solid fa-user-tie"></i> <span>Role add</span> <span class="menu-arrow"></span></a>
-					</li>
-					<li class="submenu" *ngIf="role === 'Admin'">
-						<a routerLink="/app/RolesList"><i class="fa-solid fa-user-tie"></i> <span>Role list</span> <span class="menu-arrow"></span></a>
-					</li>
+                <!-- Settings -->
+                <li class="submenu">
+                    <a href="javascript:void(0);"><i class="fa-solid fa-cog"></i> <span>Settings</span> <span class="menu-arrow"></span></a>
+                    <ul>
+                        <!-- Account -->
+                        <li class="submenu" *ngIf="role === 'Admin' || role === 'Manager'">
+                            <a href="javascript:void(0);"><span>Account</span> <span class="menu-arrow"></span></a>
+                            <ul>
+                                <!-- User -->
+                                <li class="submenu">
+                                    <a href="javascript:void(0);"><span>User</span> <span class="menu-arrow"></span></a>
+                                    <ul>
+                                        <li *ngIf="role === 'Admin'"><a routerLink="/app/NewAccount">User Add</a></li>
+                                        <li *ngIf="role === 'Admin'"><a routerLink="/app/UserList">User List</a></li>
+                                    </ul>
+                                </li>
+                                <!-- Role -->
+                                <li class="submenu"  *ngIf="role === 'Admin' || role === 'Manager'">
+                                    <a href="javascript:void(0);"><span>Role</span> <span class="menu-arrow"></span></a>
+                                    <ul>
+                                        <li *ngIf="role === 'Admin'"><a routerLink="/app/NewRole">Role Add</a></li>
+                                        <li *ngIf="role === 'Admin'"><a routerLink="/app/RolesList">Role List</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
 
-					<!-- WareHouse -->
-					<li class="submenu" *ngIf="role === 'Admin' || role === 'Manager'">
-						<a routerLink="/app/NewWareHouse"><i class="fa-solid fa-warehouse"></i> <span>WareHouse add</span> <span class="menu-arrow"></span></a>
-					</li>
-					<li class="submenu" *ngIf="role === 'Admin' || role === 'Manager'">
-						<a routerLink="/app/WareHouseList"><i class="fa-solid fa-warehouse"></i> <span>WareHouse List</span> <span class="menu-arrow"></span></a>
-					</li>
-					<li class="submenu" *ngIf="role === 'Admin' || role === 'Manager' || role === 'Employee'">
-						<a routerLink="/app/NewWareHouseItem"><i class="fa-solid fa-cube"></i> <span>Item Add</span> <span class="menu-arrow"></span></a>
-					</li>
-					<li class="submenu" *ngIf="role === 'Admin' || role === 'Manager' || role === 'Employee'">
-						<a routerLink="/app/WareHouseItemList"><i class="fa-solid fa-cube"></i> <span>Item List</span> <span class="menu-arrow"></span></a>
-					</li>
+                        <!-- Country -->
+                        <li class="submenu">
+                            <a href="javascript:void(0);"><span>Country</span> <span class="menu-arrow"></span></a>
+                            <ul>
+                                <li *ngIf="role === 'Admin' || role === 'Manager' || role === 'Employee'"><a routerLink="/app/NewCountry">Country Add</a></li>
+                                <li *ngIf="role === 'Admin' || role === 'Manager' || role === 'Employee'"><a routerLink="/app/CountryList">Country List</a></li>
+                            </ul>
+                        </li>
 
-					<!-- Country -->
-					<li class="submenu" *ngIf="role === 'Admin' || role === 'Manager' || role === 'Employee'">
-						<a routerLink="/app/NewCountry"><i class="fa-solid fa-earth-americas"></i> <span>Country add</span> <span class="menu-arrow"></span></a>
-					</li>
-					<li class="submenu" *ngIf="role === 'Admin' || role === 'Manager' || role === 'Employee'">
-						<a routerLink="/app/CountryList"><i class="fa-solid fa-earth-americas"></i> <span>Country List</span> <span class="menu-arrow"></span></a>
-					</li>
+                        <!-- City -->
+                        <li class="submenu">
+                            <a href="javascript:void(0);"><span>City</span> <span class="menu-arrow"></span></a>
+                            <ul>
+                                <li *ngIf="role === 'Admin' || role === 'Manager' || role === 'Employee'"><a routerLink="/app/NewCity">City Add</a></li>
+                                <li *ngIf="role === 'Admin' || role === 'Manager' || role === 'Employee'"><a routerLink="/app/CityList">City List</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
 
-					<!-- City -->
-					<li class="submenu" *ngIf="role === 'Admin' || role === 'Manager' || role === 'Employee'">
-						<a routerLink="/app/NewCity"><i class="fa-solid fa-building"></i> <span>City add</span> <span class="menu-arrow"></span></a>
-					</li>
-					<li class="submenu" *ngIf="role === 'Admin' || role === 'Manager' || role === 'Employee'">
-						<a routerLink="/app/CityList"><i class="fa-solid fa-building"></i> <span>City List</span> <span class="menu-arrow"></span></a>
-					</li>
-				</ul>
+                <!-- Warehouses -->
+                <li class="submenu">
+                    <a href="javascript:void(0);"><i class="fa-solid fa-warehouse"></i> <span>Warehouses</span> <span class="menu-arrow"></span></a>
+                    <ul>
+                        <!-- Warehouse -->
+                        <li class="submenu" *ngIf="role === 'Admin' || role === 'Manager'">
+                            <a href="javascript:void(0);"><span>Warehouses</span> <span class="menu-arrow"></span></a>
+                            <ul>
+                                <li *ngIf="role === 'Admin' || role === 'Manager'"><a routerLink="/app/NewWareHouse">Warehouse Add</a></li>
+                                <li *ngIf="role === 'Admin' || role === 'Manager'"><a routerLink="/app/WareHouseList">Warehouse List</a></li>
+                            </ul>
+                        </li>
+                        <!-- Items -->
+                        <li class="submenu">
+                            <a href="javascript:void(0);"><span>Items</span> <span class="menu-arrow"></span></a>
+                            <ul>
+                                <li *ngIf="role === 'Admin' || role === 'Manager' || role === 'Employee'"><a routerLink="/app/NewWareHouseItem">Item Add</a></li>
+                                <li *ngIf="role === 'Admin' || role === 'Manager' || role === 'Employee'"><a routerLink="/app/WareHouseItemList">Item List</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
 
+            </ul>
+        </div>
+    </div>
+</div>
 
-
-                                             <!-- fas fa-cog -->
-
-			</div>
-		</div>
-	</div>
 	<!-- /Sidebar -->
 
 	<!-- Page Wrapper -->
